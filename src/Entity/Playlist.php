@@ -111,5 +111,10 @@ class Playlist
         }
         return $categories;
     }
+    
+    public function getNumberOfFormations(): int
+    {
+        return count($this->formations);
+    }
 
 }

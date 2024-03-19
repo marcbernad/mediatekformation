@@ -10,6 +10,9 @@
                     {{ playlist.name }}&nbsp;
                 {% endfor %}
             <br /><br />
+            <strong>nombre de vidéos :</strong>
+                {{ playlist.getNumberOfFormations() }}
+            <br /><br />
             <strong>description :</strong><br />
                 {{ playlist.description|nl2br }}
         </div>

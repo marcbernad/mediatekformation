@@ -90,4 +90,16 @@ class PlaylistRepository extends ServiceEntityRepository
                             ->getResult();
         }
     }
+    
+    public function findAllOrderByNumberOfFormations($ordre)
+    {
+        $qb = $this->createQueryBuilder('p')
+                ->select('p, COUNT(f.id) as HIDDEN num')
+                ->leftJoin('p.formations', 'f')
+                ->groupBy('p.id')
+                ->orderBy('num', $ordre);
+
+        return $qb->getQuery()->getResult();
+    }
+
 }
