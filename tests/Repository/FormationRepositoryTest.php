@@ -13,18 +13,30 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
  */
 class FormationRepositoryTest extends KernelTestCase {
 
+    
+    /**
+     * 
+     * @return FormationRepository
+     */
     public function recupRepository(): FormationRepository {
         self::bootKernel();
         $repository = self::getContainer()->get(FormationRepository::class);
         return $repository;
     }
 
+    /**
+     * Teste le nombre de formations
+     */
     public function testNbFormations() {
         $repository = $this->recupRepository();
         $nbFormations = $repository->count([]);
         $this->assertEquals(2, $nbFormations);
     }
 
+    /**
+     * Créer une formation
+     * @return Formation
+     */
     public function newFormation(): Formation {
         $formation = (new Formation())
                 ->setTitle("FormationTest")
@@ -33,6 +45,9 @@ class FormationRepositoryTest extends KernelTestCase {
         return $formation;
     }
 
+    /**
+     * Test l'ajout d'une formation
+     */
     public function testAddFormation() {
         $repository = $this->recupRepository();
         $formation = $this->newFormation();
@@ -41,6 +56,9 @@ class FormationRepositoryTest extends KernelTestCase {
         $this->assertEquals($nbFormations + 1, $repository->count([]), "erreur lors de l'ajout");
     }
 
+    /**
+     * Teste la suppression d'une formation
+     */
     public function testRemoveFormation() {
         $repository = $this->recupRepository();
         $formation = $this->newFormation();
@@ -50,6 +68,9 @@ class FormationRepositoryTest extends KernelTestCase {
         $this->assertEquals($nbFormations - 1, $repository->count([]), "erreur lors de la suppression");
     }
 
+    /**
+     * Teste le tri des formations par leur titre
+     */
     public function testFindAllOrderBy() {
         $repository = $this->recupRepository();
 
@@ -66,6 +87,9 @@ class FormationRepositoryTest extends KernelTestCase {
         }
     }
 
+    /**
+     * Teste la recherche d'une formation d'après le titre
+     */
     public function testFindByContainValue() {
         $repository = $this->recupRepository();
 
@@ -81,6 +105,9 @@ class FormationRepositoryTest extends KernelTestCase {
         $this->assertEquals(count($allFormations), count($formations));
     }
 
+    /**
+     * Teste la récupération des n formations les plus récentes
+     */
     public function testFindAllLasted() {
         $repository = $this->recupRepository();
 
@@ -95,6 +122,9 @@ class FormationRepositoryTest extends KernelTestCase {
         }
     }
 
+    /**
+     * Teste la récupération des formations associées à une playlist
+     */
     public function testFindAllForOnePlaylist() {
         $repository = $this->recupRepository();
 

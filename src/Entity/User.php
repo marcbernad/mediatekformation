@@ -40,16 +40,32 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $keycloakId;
 
+    
+    /**
+     * 
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    
+    /**
+     * 
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    
+    /**
+     * 
+     * @param string $email
+     * @return self
+     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -87,6 +103,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return array_unique($roles);
     }
 
+    
+    /**
+     * 
+     * @param array $roles
+     * @return self
+     */
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
@@ -102,6 +124,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->password;
     }
 
+    
+    /**
+     * 
+     * @param string $password
+     * @return self
+     */
     public function setPassword(string $password): self
     {
         $this->password = $password;
@@ -129,11 +157,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
+    
+    /**
+     * 
+     * @return string|null
+     */
     public function getKeycloakId(): ?string
     {
         return $this->keycloakId;
     }
 
+    
+    /**
+     * 
+     * @param string|null $keycloakId
+     * @return self
+     */
     public function setKeycloakId(?string $keycloakId): self
     {
         $this->keycloakId = $keycloakId;

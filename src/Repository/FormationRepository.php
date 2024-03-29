@@ -16,11 +16,23 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class FormationRepository extends ServiceEntityRepository
 {
+    
+    /**
+     * 
+     * @param ManagerRegistry $registry
+     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Formation::class);
     }
 
+    
+    /**
+     * 
+     * @param Formation $entity
+     * @param bool $flush
+     * @return void
+     */
     public function add(Formation $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
@@ -30,6 +42,13 @@ class FormationRepository extends ServiceEntityRepository
         }
     }
 
+    
+    /**
+     * 
+     * @param Formation $entity
+     * @param bool $flush
+     * @return void
+     */
     public function remove(Formation $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);

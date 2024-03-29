@@ -11,6 +11,9 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  */
 class PlaylistsControllerTest extends WebTestCase {
 
+    /**
+     * Teste le tri des champs
+     */
     public function testSort() {
         $client = static::createClient();
 
@@ -37,6 +40,9 @@ class PlaylistsControllerTest extends WebTestCase {
         $this->assertSelectorTextContains('h5', 'Eclipse et Java');
     }
     
+    /**
+     * Teste la recherche de champs
+     */
     public function testFindAllContain(){
         $client = static::createClient();
         $crawler = $client->request('POST', '/playlists/recherche/name', ['recherche' => 'Cours Triggers']);
@@ -52,6 +58,9 @@ class PlaylistsControllerTest extends WebTestCase {
         $this->assertCount(1, $crawler->filter('h5'));
     }
     
+    /**
+     * Teste l'ouverture d'une page à partir d'un lien
+     */
     public function testShowOne() {
         $client = static::createClient();
 

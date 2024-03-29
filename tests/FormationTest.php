@@ -14,6 +14,9 @@ use PHPUnit\Framework\TestCase;
  */
 class FormationTest extends TestCase {
     
+    /**
+     * Test la conversion de format de la date
+     */
     public function testGetPublishedAtString(){
         $formation = new Formation();
         $formation->setPublishedAt(new \DateTime("2024-01-04 17:00:12"));

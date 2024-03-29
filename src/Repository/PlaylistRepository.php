@@ -17,11 +17,22 @@ use Doctrine\Persistence\ManagerRegistry;
 class PlaylistRepository extends ServiceEntityRepository
 {
 
+    /**
+     * 
+     * @param ManagerRegistry $registry
+     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Playlist::class);
     }
 
+    
+    /**
+     * 
+     * @param Playlist $entity
+     * @param bool $flush
+     * @return void
+     */
     public function add(Playlist $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
@@ -31,6 +42,13 @@ class PlaylistRepository extends ServiceEntityRepository
         }
     }
 
+    
+    /**
+     * 
+     * @param Playlist $entity
+     * @param bool $flush
+     * @return void
+     */
     public function remove(Playlist $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
@@ -91,6 +109,12 @@ class PlaylistRepository extends ServiceEntityRepository
         }
     }
     
+    
+    /**
+     * 
+     * @param type $ordre
+     * @return type
+     */
     public function findAllOrderByNumberOfFormations($ordre)
     {
         $qb = $this->createQueryBuilder('p')
