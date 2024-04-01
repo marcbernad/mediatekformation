@@ -69,4 +69,4 @@ La suppression d'une playlist se fait en cliquant sur le bouton supprimer et en 
 - Dans phpMyAdmin, se connecter à MySQL en root sans mot de passe et créer la BDD 'mediatekformation'.<br>
 - Récupérer le fichier mediatekformation.sql en racine du projet et l'utiliser pour remplir la BDD (si vous voulez mettre un login/pwd d'accès, il faut créer un utilisateur, lui donner les droits sur la BDD et il faut le préciser dans le fichier ".env" en racine du projet).<br>
 - L'adresse pour lancer le site en local est : http://localhost/mediatekformation/public/index.php<br>
-- Pour l'authentification, télécharger Keycloak. Configurer un client et un user dans l'interface de gestion à l'adresse : http://localhost:8080. Ajouter les données de connexion dans le fichier .env<br>
+- Pour l'authentification, installer Keycloak. Configurer un client et un user dans l'interface de gestion à l'adresse : http://localhost:8080. Ajouter les données de connexion dans le fichier .env<br>
