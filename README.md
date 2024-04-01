@@ -2,33 +2,30 @@
 ## Présentation
 Ce site, développé avec Symfony 5.4, permet d'accéder aux vidéos d'auto-formation proposées par une chaîne de médiathèques et qui sont aussi accessibles sur YouTube.<br> 
 Cette version ajoute la partie d'administration du site permettant de gérer les formations, les playlists et les catégories.<br>
-La version ayant servi de base à la réalisation de ce projet est consultable sur le dépôt GitHub suivant : https://github.com/CNED-SLAM/mediatekformation.git<br>
-<img width="309" alt="Diagramme de cas d'utilisation back-office" src="https://github.com/marcbernad/mediatekformation/assets/115026928/3b08c0c3-df7e-4fd7-be79-4fa876a5ff2b">
+La version ayant servi de base à la réalisation de ce projet est consultable sur le dépôt GitHub suivant : https://github.com/CNED-SLAM/mediatekformation.git<br><br>
+<img width="309" alt="Diagramme de cas d'utilisation back-office" src="https://github.com/marcbernad/mediatekformation/assets/115026928/3b08c0c3-df7e-4fd7-be79-4fa876a5ff2b"><br>
 
 ## Les différentes pages
 Voici les 5 pages correspondant aux différents cas d’utilisation.
-### Page 1 : l'accueil
-Cette page présente le fonctionnement du site et les 2 dernières vidéos mises en ligne.<br>
-La partie du haut contient une bannière (logo, nom et phrase présentant le but du site) et le menu permettant d'accéder aux 3 pages principales (Accueil, Formations, Playlists).<br>
-Le centre contient un texte de présentation avec, entre autres, les liens pour accéder aux 2 autres pages principales.<br>
-La partie basse contient les 2 dernières formations mises en ligne. Cliquer sur une image permet d'accéder à la page 3 de présentation de la formation.<br>
-Le bas de page contient un lien pour accéder à la page des CGU : ce lien est présent en bas de chaque page excepté la page des CGU.<br>
-![img2](https://github.com/CNED-SLAM/mediatekformation/assets/100127886/9168058b-7e21-4dc9-a6b8-d6299f5b16c9)
-### Page 2 : les formations
-Cette page présente les formations proposées en ligne (accessibles sur YouTube).<br>
-La partie haute est identique à la page d'accueil (bannière et menu).<br>
-La partie centrale contient un tableau composé de 5 colonnes :<br>
-•	La 1ère colonne ("formation") contient le titre de chaque formation.<br>
-•	La 2ème colonne ("playlist") contient le nom de la playlist dans laquelle chaque formation se trouve.<br>
-•	La 3ème colonne ("catégories") contient la ou les catégories concernées par chaque formation (langage…).<br>
-•	La 4ème colonne ("date") contient la date de parution de chaque formation.<br>
-•	LA 5ème contient la capture visible sur YouTube, pour chaque formation.<br>
-Au niveau des colonnes "formation", "playlist" et "date", 2 boutons permettent de trier les lignes en ordre croissant ("<") ou décroissant (">").<br>
-Au niveau des colonnes "formation" et "playlist", il est possible de filtrer les lignes en tapant un texte : seuls les lignes qui contiennent ce texte sont affichées. Si la zone est vide, le fait de cliquer sur "filtrer" permet de retrouver la liste complète.<br> 
-Au niveau de la catégorie, la sélection d'une catégorie dans le combo permet d'afficher uniquement les formations qui ont cette catégorie. Le fait de sélectionner la ligne vide du combo permet d'afficher à nouveau toutes les formations.<br>
-Par défaut la liste est triée sur la date par ordre décroissant (la formation la plus récente en premier).<br>
-Le fait de cliquer sur une miniature permet d'accéder à la troisième page contenant le détail de la formation.<br>
-![img3](https://github.com/CNED-SLAM/mediatekformation/assets/100127886/6744b340-b6a2-41cb-ae43-18b4ba86f29e)
+### Page 1 : Gestion des formations
+Cette page affiche la gestion des formations.<br>
+La partie du haut contient une bannière (logo, nom et phrase présentant le but du site), le menu permettant d'accéder aux 3 pages principales (Formations, Playlists, Catégories) ainsi qu'un bouton permettant d'ajouter une formation.<br>
+Le centre contient la liste des formations avec pour chacune la possibilité de l'éditer ou de la supprimer.<br><br>
+![liste formations](https://github.com/marcbernad/mediatekformation/assets/115026928/c840e374-cbc1-4ecc-a73d-7c766e9cc911)<br>
+
+### Page 2 : Ajout d'une formation
+Cette page affiche le formulaire permettant d'ajouter une formation.<br>
+La partie haute contient la bannière et le menu.<br>
+La partie centrale contient un formulaire composé de 6 champs :<br>
+•	Le premier champ ("date") permet de sélectionner la date de création.<br>
+•	Le deuxième champ ("Titre") permet de saisir le titre de la formation.<br>
+•	Le troisième champ permet de saisir l'ID de la vidéo.<br>
+•	Le quatrième champ permet de sélectionner un playlist où insérer cette formation.<br>
+•	Le cinquième champ permet d'attribuer une ou plusieurs catégories à la formation.<br>
+•	Le sixième champ permet de saisir une description de la formation.<br>
+Un bouton permet d'enregistrer les informations saisies.<br>
+![ajout formation](https://github.com/marcbernad/mediatekformation/assets/115026928/c407fc49-5d62-4b0a-8af1-3b3be2c0f93b)<br>
+
 ### Page 3 : détail d'une formation
 Cette page n'est pas accessible par le menu mais uniquement en cliquant sur une miniature dans la page "Formations" ou une image dans la page "Accueil".<br>
 La partie haute est identique à la page d'accueil (bannière et menu).<br>
