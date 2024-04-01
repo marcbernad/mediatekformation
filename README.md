@@ -19,7 +19,7 @@ La suppression d'une formation se fait en cliquant sur le bouton supprimer et en
 Cette page affiche le formulaire permettant d'ajouter une formation.<br>
 La partie haute contient la bannière et le menu, comme pour toutes les pages du site.<br>
 La partie centrale contient un formulaire composé de 6 champs :<br>
-•	Le premier champ ("date") permet de sélectionner la date de création.<br>
+•	Le premier champ ("Date") permet de sélectionner la date de création.<br>
 •	Le deuxième champ ("Titre") permet de saisir le titre de la formation.<br>
 •	Le troisième champ permet de saisir l'ID de la vidéo.<br>
 •	Le quatrième champ permet de sélectionner un playlist où insérer cette formation.<br>
