@@ -6,7 +6,7 @@ La version ayant servi de base à la réalisation de ce projet est consultable s
 <img width="309" alt="Diagramme de cas d'utilisation back-office" src="https://github.com/marcbernad/mediatekformation/assets/115026928/3b08c0c3-df7e-4fd7-be79-4fa876a5ff2b"><br>
 
 ## Les différentes pages
-Voici les 5 pages correspondant aux différents cas d’utilisation.
+Voici les 7 pages correspondant aux différents cas d’utilisation.
 ### Page 1 : Gestion des formations
 Cette page affiche la gestion des formations.<br>
 La partie du haut contient une bannière (logo, nom et phrase présentant le but du site), le menu permettant d'accéder aux 3 pages principales (Formations, Playlists, Catégories) ainsi qu'un bouton permettant d'ajouter une formation.<br>
@@ -50,7 +50,8 @@ La partie centrale contient un formulaire composé de 2 champs :<br>
 
 ### Page 6 : Edition d'une playlist
 Cette page est accessible en cliquant sur le bouton d'édition dans la liste des playlists.<br>
-La partie centrale contient le formulaire pré-rempli reprenant les mêmes champs que pour l'ajout.<br><br>
+La partie centrale contient le formulaire pré-rempli reprenant les mêmes champs que pour l'ajout.<br>
+La partie basse affiche la liste des formations actuellement contenues dans la playlist.<br><br>
 <img width="673" alt="edition playlist" src="https://github.com/marcbernad/mediatekformation/assets/115026928/25dc7d0e-8bcc-470b-9932-51c7096b6f58"><br>
 
 ### Page 7 : Gestion des catégories
