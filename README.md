@@ -10,8 +10,8 @@ Voici les 7 pages correspondant aux différents cas d’utilisation.
 ### Page 1 : Gestion des formations
 Cette page affiche la gestion des formations.<br>
 La partie du haut contient une bannière (logo, nom et phrase présentant le but du site), le menu permettant d'accéder aux 3 pages principales (Formations, Playlists, Catégories) ainsi qu'un bouton permettant d'ajouter une formation.<br>
-Le centre contient la liste des formations avec pour chacune la possibilité de l'éditer ou de la supprimer.<br>
-La suppression d'une formation se fait en cliquant sur le bouton supprimer et en répondant à une demande de confirmation.<br><br>
+La partie centrale contient la liste des formations avec pour chacune la possibilité de l'éditer ou de la supprimer.<br>
+La suppression d'une formation se fait en cliquant sur le bouton "supprimer" et en répondant à une demande de confirmation.<br><br>
 <img width="671" alt="liste formations" src="https://github.com/marcbernad/mediatekformation/assets/115026928/c82f8a34-a7a8-4f72-be12-56ebab3ec2b6"><br>
 
 
@@ -22,7 +22,7 @@ La partie centrale contient un formulaire composé de 6 champs :<br>
 •	Le premier champ ("Date") permet de sélectionner la date de création.<br>
 •	Le deuxième champ ("Titre") permet de saisir le titre de la formation.<br>
 •	Le troisième champ permet de saisir l'ID de la vidéo.<br>
-•	Le quatrième champ permet de sélectionner un playlist où insérer cette formation.<br>
+•	Le quatrième champ permet de sélectionner une playlist où insérer cette formation.<br>
 •	Le cinquième champ permet d'attribuer une ou plusieurs catégories à la formation.<br>
 •	Le sixième champ permet de saisir une description de la formation.<br>
 Un bouton permet d'enregistrer les informations saisies.<br><br>
@@ -38,7 +38,7 @@ La partie centrale contient le formulaire pré-rempli reprenant les mêmes champ
 Après avoir cliqué sur "PLaylists" dans le menu, cette page affiche la gestion des playlists.<br>
 La partie haute contient, en plus de la bannière et du menu, un bouton d'ajout de playlist.<br>
 La partie centrale contient la liste des playlists avec pour chacune la possibilité de l'éditer ou de la supprimer.<br>
-La suppression d'une playlist se fait en cliquant sur le bouton supprimer et en répondant à une demande de confirmation.<br><br>
+La suppression d'une playlist se fait en cliquant sur le bouton "supprimer" et en répondant à une demande de confirmation.<br><br>
 <img width="668" alt="liste playlists" src="https://github.com/marcbernad/mediatekformation/assets/115026928/abf221dd-0827-4230-bc51-f6f9003268b7"><br>
 
 ### Page 5 : Ajout d'une playlist
@@ -58,7 +58,7 @@ La partie basse affiche la liste des formations actuellement contenues dans la p
 Après avoir cliqué sur "Catégories" dans le menu, cette page affiche la gestion des catégories.<br>
 La partie haute contient, en plus de la bannière et du menu, un bouton d'ajout de catégorie.<br>
 La partie centrale contient la liste des playlists avec pour chacune la possibilité de la supprimer.<br>
-La suppression d'une playlist se fait en cliquant sur le bouton supprimer et en répondant à une demande de confirmation.<br><br>
+La suppression d'une playlist se fait en cliquant sur le bouton "supprimer" et en répondant à une demande de confirmation.<br><br>
 <img width="677" alt="catégories" src="https://github.com/marcbernad/mediatekformation/assets/115026928/e7bf142f-8761-45d6-aee9-cd36506a0f27"><br>
 
 
@@ -69,4 +69,4 @@ La suppression d'une playlist se fait en cliquant sur le bouton supprimer et en 
 - Dans phpMyAdmin, se connecter à MySQL en root sans mot de passe et créer la BDD 'mediatekformation'.<br>
 - Récupérer le fichier mediatekformation.sql en racine du projet et l'utiliser pour remplir la BDD (si vous voulez mettre un login/pwd d'accès, il faut créer un utilisateur, lui donner les droits sur la BDD et il faut le préciser dans le fichier ".env" en racine du projet).<br>
 - L'adresse pour lancer le site en local est : http://localhost/mediatekformation/public/index.php<br>
-- Pour l'authentification, installer Keycloak. Configurer un client et un user dans l'interface de gestion à l'adresse : http://localhost:8080. Ajouter les données de connexion dans le fichier .env<br>
+- Pour l'authentification, installer Keycloak. Configurer un client et un user dans l'interface de gestion à l'adresse : http://localhost:8080. Ajouter les données de connexion dans le fichier ".env"<br>
